@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {
+  Image,
   StyleSheet,
   Text,
   View,
@@ -11,19 +12,19 @@ export default class App extends Component{
     return (
       <View style={styles.main}>
         <View style={styles.header}>
-  
+        <Image source={require('../../assets/img/logo.png')}
+        style={styles.headerImg}/>
         </View>
-
         <View style={styles.section1}>
             <Text style={styles.text1}>Consultas agendadas</Text>
             <View style={styles.line1}></View>
-            <Text style={styles.text3}>◼ Data - Especialidade - Paciente</Text>
+            <Text style={styles.text3}>◼ Data - Especialidade - Médico</Text>
         </View>
 
         <View style={styles.section2}>
             <Text style={styles.text2}>Consultas realizadas</Text>
             <View style={styles.line2}></View>
-            <Text style={styles.text4}>◼ Data - Especialidade - Paciente</Text>
+            <Text style={styles.text4}>◼ Data - Especialidade - Médico</Text>
         </View>
       </View>
     );
@@ -32,7 +33,6 @@ export default class App extends Component{
 
 const styles = StyleSheet.create({
   main: {
-    flex: 1
   },
 
   //header
@@ -42,25 +42,27 @@ const styles = StyleSheet.create({
     width: '100%',
     height: 65,
     borderWidth: 4,
-    borderColor: '#1AD9A3'
+    borderColor: '#1AD9A3',
+    alignItems: 'center',
+    justifyContent: 'center'
   },
 
   headerImg: {
-    height: 34,
-    width: 39
+    height: 50,
+    width: 50,
   },
 
   //section1
   section1: {
     height: 250,
     width: 360,
-    marginTop: 60,
+    marginTop: 100,
     marginLeft: 10,
   },
 
   text1: {
     fontSize: 25,
-    fontFamily: 'Cambria',
+    fontFamily: 'Open Sans Light',
     color: 'black',
   },
 
@@ -72,9 +74,11 @@ const styles = StyleSheet.create({
   },
 
   text3: {
-    paddingTop: 10,
-    fontFamily: 'Actor',
-    fontSize: 15
+    paddingTop: 15,
+    paddingLeft: 5,
+    fontSize: 15,
+    letterSpacing: 2,
+    fontFamily: 'Open Sans Light'
   },
 
   //section 2
@@ -82,25 +86,27 @@ const styles = StyleSheet.create({
     height: 250,
     width: 360,
     marginTop: 10,
-    marginLeft: 10,
+    marginLeft: 10
   },
 
   text2: {
   fontSize: 25,
-  fontFamily: 'Cambria',
-  color: 'black',
+  fontFamily: 'Open Sans Light',
+  color: 'black'
   },
 
   line2: {
   width: 360,
   marginTop: 10,
-  borderBottomColor: '#1AD9A3',
-  borderBottomWidth: 2
+  borderBottomWidth: 2,
+  borderBottomColor: '#1AD9A3'
   },
 
   text4: {
-    paddingTop: 10,
-    fontFamily: 'Actor',
-    fontSize: 15
+    paddingTop: 15,
+    paddingLeft: 5,
+    fontSize: 15,
+    letterSpacing: 2,
+    fontFamily: 'Open Sans Light'
   }
 });
