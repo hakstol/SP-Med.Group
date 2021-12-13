@@ -1,0 +1,226 @@
+/*All*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*Header*/
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 69px;
+    border: 4px solid #1AD9A3;
+    box-sizing: border-box;
+}
+
+#logo{
+    width: 54px;
+    height: 52px;
+    margin-left: 76px;
+}
+
+#a-logo{
+    width: 54px;
+    height: 52px;
+}
+
+#user{
+    width: 50px;
+    height: 51px;
+    margin-right: 76px;
+    top: 9px;
+    border-radius: 100px;
+}
+
+#a-user{
+    margin-right: 76px;
+    width: 50px;
+    height: 51px;
+}
+
+#adicionar-consulta{
+    position: absolute;
+    left: 70%;
+    color: #000000;
+    text-decoration: none;
+    width: 235px;
+    height: 32px;
+    font-family: Abhaya Libre;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 35px;
+    display: flex;
+    letter-spacing: -0.015em;   
+}
+
+p{
+    margin-left: 1301px;
+    margin-right: 76px;
+    width: 235px;
+    height: 32px;
+    font-family: Abhaya Libre;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 35px;
+    display: flex;
+    letter-spacing: -0.015em;   
+}
+/*Header*/
+
+/*Body*/
+@media (max-width: 1613px){
+    #pesquisar{
+        padding-left: 0.5em;
+        margin-left: 100px;
+        align-items: center;
+        position: absolute;
+        width: 576px;
+        height: 38px;
+        left: 432px;
+        top: 222px;
+        background: rgba(0, 0, 0, 0.05);
+        border: 1px solid #000000;
+        box-shadow: 0 0 0.5em black;
+        border-radius: 6px;
+        font-family: Abhaya Libre;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: -0.015em;
+    }
+    
+    ::placeholder {
+        padding-left: 0.1em;
+        font-family: Abhaya Libre;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 24px;
+        display: flex;
+        letter-spacing: -0.015em;
+        color: rgba(0, 0, 0, 0.5);
+    }
+    
+    #botao{ 
+        position: absolute;
+        width: 150px;
+        height: 40px;
+        left: 1134px;
+        top: 222px;
+        background: #1AD9A3;
+        border: 1px solid #000000;
+        box-sizing: border-box;
+        border-radius: 6px;
+        box-shadow: 0 0 0.3em black;
+        font-family: Abhaya Libre;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 23px;
+        line-height: 27px;
+        align-items: center;
+        text-align: center;
+        letter-spacing: -0.015em;
+    }
+    
+    #botao:hover{
+        background-color: #1AD9A3;
+        opacity: 0.7;
+        text-shadow: none;
+    }
+    
+    #img-calendario{
+        position: absolute;
+        width: 300px;
+        height: 175px;
+        left: 103px;
+        top: 138px;
+        margin-left: 75px;
+    }
+    
+    .lines{ 
+        position: absolute;
+        width: 100%;
+        height: 0px;
+        left: 0px;
+        border: 1px solid #1AD9A3;
+        transform: rotate(-0.04deg);
+    }
+    
+    #line1{
+        top: 51%;
+    }
+    
+    #line2{
+        top: 90%;
+    }
+    
+    #topic1{
+        position: absolute;
+        width: 446px;
+        height: 45px;
+        margin-left: 61px;
+        top: 43.5%;
+        font-family: Abhaya Libre;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 48px;
+        line-height: 57px;
+        letter-spacing: -0.015em;
+        color: #3587F2;
+    }
+    
+    #topic2{
+        position: absolute;
+        width: 446px;
+        height: 45px;
+        margin-left: 61px;
+        top: 83%;
+        font-family: Abhaya Libre;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 48px;
+        line-height: 57px;
+        letter-spacing: -0.015em;
+        color: #3587F2;
+    }
+    
+    .dados{
+        position: absolute;
+        width: 380px;
+        height: 35px;
+        left: 76px;
+        top: 427px;
+        font-family: Abhaya Libre;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 23px;
+        line-height: 27px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        letter-spacing: -0.015em;
+        color: #000000;
+    }
+    
+    #dado1{
+        top: 51.5%;
+    }
+    
+    #dado2 {
+        top: 91%;
+    }
+    
+    #vazio{
+        margin-top: 45%;
+        background-color: white;
+        width: 80%;
+        height: 200px;
+        margin-left: 76px;
+    }
+}
+/*Body*/

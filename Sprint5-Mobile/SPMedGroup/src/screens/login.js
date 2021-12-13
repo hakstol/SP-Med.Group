@@ -36,7 +36,7 @@ export default class Login extends Component {
         
         const token = resposta.data.token;
         await AsyncStorage.setItem('userToken', token);
-        this.props.navigation.navigate('Medico');
+        this.props.navigation.navigate('Consultas');
         console.warn(token);
       }
     }

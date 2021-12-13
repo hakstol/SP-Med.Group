@@ -1,0 +1,125 @@
+/*All*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*Header*/
+header{
+    width: 100%;
+    height: 69px;
+    top: 0px;
+    border: 4px solid #1AD9A3;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+}
+
+#logo{
+    margin-left: 76px;
+    width: 54px;
+    height: 52px;
+    left: 76px;
+    top: 8px;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+/*Header*/
+
+/*Body*/
+p{
+    margin-right: 76px;
+    font-family: Abhaya Libre;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 35px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.015em;
+}
+
+#home{
+    width: 100%;
+    opacity: 0.5;
+}
+
+.centralizar{
+    position: absolute;
+    margin: 0 auto;
+    width: 100%;
+    top: 25%;
+}
+
+#logo-central{
+    margin: 0 auto;
+    display: flex;
+    width: 285px;
+    height: 277px;
+}
+
+.lines{
+    width: 38%;
+}
+
+#line1{
+    float: left;
+    border: 4px solid #1AD9A3;
+}
+
+#line2{
+    float: right;
+    border: 4px solid #3587F2;
+}
+
+.card{
+    display: flex;
+    position: absolute;
+    height: 600px;
+    top: 70%;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#paciente{
+    align-items: center;
+    justify-content: center;
+    font-family: Abhaya Libre;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 144px;
+    line-height: 170px;
+    margin-left: 3%;
+    width: 100%;
+    height: 600px;
+    float: left;
+    border-radius: 10px;
+    background: rgba(26, 217, 163, 0.6);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);  
+}
+
+#medico{
+    align-items: center;
+    justify-content: center;
+    font-family: Abhaya Libre;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 144px;
+    line-height: 170px;
+    margin-right: 3%;
+    width: 100%;
+    height: 600px;
+    float: right;
+    border-radius: 10px;
+    background: rgba(53, 135, 242, 0.6);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+/*Body*/

@@ -8,6 +8,32 @@ import {
 
 
 export default class App extends Component{
+    constructor(props) {
+        super(props);
+        this.state = {
+            listaConsultas: []
+        };
+    }
+
+    buscarConsultas = async () => {
+        const xambers = await AsyncStorage.getItem('userToken')
+
+
+        const resposta = await api.get('/Consultas/Lista/Minhas', {
+            headers: {
+                authorization: 'Bearer ' + xambers
+            }
+        });
+
+        const dadosDaApi = resposta.data;
+
+        this.setState({ listaConsultas: dadosDaApi })
+
+    }
+    componentDidMount() {
+        this.buscarConsultas();
+    }
+
   render(){
     return (
       <View style={styles.main}>
@@ -18,13 +44,13 @@ export default class App extends Component{
         <View style={styles.section1}>
             <Text style={styles.text1}>Consultas agendadas</Text>
             <View style={styles.line1}></View>
-            <Text style={styles.text3}>◼ Data - Especialidade - Médico</Text>
+            <Text style={styles.text3}>◼ Data - Especialidade - Paciente</Text>
         </View>
 
         <View style={styles.section2}>
             <Text style={styles.text2}>Consultas realizadas</Text>
             <View style={styles.line2}></View>
-            <Text style={styles.text4}>◼ Data - Especialidade - Médico</Text>
+            <Text style={styles.text4}>◼ Data - Especialidade - Paciente</Text>
         </View>
       </View>
     );

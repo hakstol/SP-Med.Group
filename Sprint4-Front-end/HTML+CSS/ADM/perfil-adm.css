@@ -1,0 +1,161 @@
+/*All*/
+*{
+    margin: 0;
+}
+
+/*Header*/
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 69px;
+    border: 4px solid #1AD9A3;
+    box-sizing: border-box;
+}
+
+#logo{
+    position: absolute;
+    width: 54px;
+    height: 52px;
+    left: 76px;
+    top: 9px;
+}
+
+#user{
+    position: absolute;
+    align-items: center;
+    width: 50px;
+    height: 51px;
+    right: 76px;   
+    float: right;
+    top: 10px;
+    border-radius: 100px;
+}
+/*Header*/
+
+/*Body*/
+#user_profile{
+    position: absolute;
+    width: 391px;
+    height: 378px;
+    left: 200px;
+    top: 350px;
+    border-radius: 189px;
+}
+
+.line{
+    margin-top:175px;
+}
+
+#hr-l{
+    width: 929.5px;
+    height: 0px;
+    float: left;
+    top: 260px;
+    border: 5px solid #3587F2;
+}
+
+#hr-r{  
+    width: 929.5px;
+    height: 0px;
+    top: 260px;
+    float: right;
+    border: 5px solid #1AD9A3;
+}
+
+h1{
+    position: absolute;
+    width: 794px;
+    height: 121px;
+    left: 542.7px;
+    top: 130px;
+    font-family: Abhaya Libre;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 120px;
+    line-height: 142px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.015em;
+    color: #3587F2;
+}
+
+form{
+    position: absolute;
+    width: 793px;
+    height: 297px;
+    left: 48%;
+    top: 420px;
+}
+
+#nome{
+    font-family: Abhaya Libre;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 59px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.015em;
+    color: #000000;
+}
+
+#username{
+    font-family: Abhaya Libre;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 59px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.015em;
+    color: #000000;
+}
+
+#tipo{
+    font-family: Abhaya Libre;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 59px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.015em;
+    color: #000000;
+}
+
+#email{
+    font-family: Abhaya Libre;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 59px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.015em;
+    color: #000000;
+}
+
+input{
+    padding-left: 0.25em;
+    font-family: Abhaya Libre;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 59px;
+    position: absolute; 
+    margin-left: 425px;
+    width: 368px;
+    height: 56px;
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid #3587F2;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+/*Body*/

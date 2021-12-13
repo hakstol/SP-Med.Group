@@ -1,0 +1,110 @@
+/*All*/
+*{
+    font-family: Abhaya 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/*Body*/
+#logo{
+        margin-top: 150px;
+        margin-bottom: 50px;
+        width: 144px;
+        height: 137px;
+        left: 1043px;
+        top: 159px;
+    }
+    
+    div{
+        display: inline-block;
+    }
+    
+    .left{
+        height: 100%;
+        width: 50%;
+        float: left;
+    }
+    
+    .medicos{
+        position: absolute;
+        border-right: 20px solid #3587F2 ;
+        float: left;
+        background-image: image();
+        width: 45%;
+        height: 100%;
+        left: 0px;
+        top: 0px;
+    }
+    
+    .right{
+        height: 100%;
+        flex-wrap: wrap;
+        background-color: white;
+        justify-content: center;
+        border-left: 20px solid #1AD9A3;
+        width: 805px;
+        float: right;
+        left: 0px;
+        top: 0px;
+    }
+    
+    form{
+        flex-wrap: wrap;
+        height: 416px;
+        margin-top: 0;
+        text-align: center;
+    }
+    
+    #title{
+        font-family: Abhaya Libre;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 64px;
+        line-height: 75px;
+        color: #078EA0;
+    }
+    
+    #email-senha{
+        padding-left: 0.25em;
+        margin-bottom: 50px;
+        font-size: 25px;
+        width: 473px;
+        height: 49px;
+        left: 878px;
+        top: 589px;
+        background: #FFFFFF;
+        border: 3px solid #3587F2;
+        box-sizing: border-box;
+    }
+    
+    .botao{
+        border: 2px solid black;
+        font-family: Abhaya Libre;
+        font-size: 30px;
+        width: 198px;
+        height: 53px;
+        left: 1016px;
+        line-height: 35px;
+        align-items: center;
+        text-align: center;
+        letter-spacing: -0.015em;
+        color: #FFFFFF;
+        background: #000000;
+        border-radius: 6px;
+    }
+    
+    .botao:hover{
+        background-color: #078EA0;
+        text-shadow: none;
+    }
+    
+    .form{  
+        display: block;
+        margin-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+        justify-content: center;
+    }
+    /*Body*/
+

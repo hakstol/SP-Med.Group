@@ -9,8 +9,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 const AuthStack = createStackNavigator();
 
 import Login from './src/screens/login';
-import Medico from './src/screens/consultas-med';
-import Paciente from './src/screens/consultas-pac';
+import Consultas from './src/screens/consultas';
 
 export default function Stack() {
   return (
@@ -25,8 +24,7 @@ export default function Stack() {
           headerShown: false,
         }}>
         <AuthStack.Screen name="Login" component={Login} />
-        <AuthStack.Screen name="Medico" component={Medico} />
-        <AuthStack.Screen name="Paciente" component={Paciente} />
+        <AuthStack.Screen name="Consultas" component={Consultas} />
       </AuthStack.Navigator>
     </NavigationContainer>
   );
