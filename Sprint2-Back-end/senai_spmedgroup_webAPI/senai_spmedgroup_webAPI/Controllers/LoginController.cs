@@ -46,12 +46,12 @@ namespace senai_spmedgroup_webAPI.Controllers
                 }
 
 
-                var minhasClaims = new[]
+                var Claims = new[]
                 {
                     new Claim(JwtRegisteredClaimNames.Email, usuarioBuscado.Email),
                     new Claim(JwtRegisteredClaimNames.Jti, usuarioBuscado.IdUsuario.ToString()),
-                    new Claim(ClaimTypes.Role, usuarioBuscado.IdTipoUsuario.ToString())
-
+                    new Claim(ClaimTypes.Role, usuarioBuscado.IdTipoUsuario.ToString()),
+                    new Claim("role", usuarioBuscado.IdTipoUsuario.ToString())
                 };
 
                 var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("spmedical-levi-chave"));
@@ -61,7 +61,7 @@ namespace senai_spmedgroup_webAPI.Controllers
                 var meuToken = new JwtSecurityToken(
                         issuer: "senai_spmedgroup_webAPI",
                         audience: "senai_spmedgroup_webAPI",
-                        claims: minhasClaims,
+                        claims: Claims,
                         expires: DateTime.Now.AddMinutes(30),
                         signingCredentials: creds
                     );

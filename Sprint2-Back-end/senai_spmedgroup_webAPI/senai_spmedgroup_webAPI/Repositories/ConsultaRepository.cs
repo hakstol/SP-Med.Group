@@ -149,7 +149,7 @@ namespace senai_spmedgroup_webAPI.Repositories
 
         List<Consultum> IConsultaRepository.ListarMinhas(int idUsuario, int idTipoUsuario)
         {
-            if (idTipoUsuario == 1)
+            if (idTipoUsuario == 2)
             {
                 Medico medico = ctx.Medicos.FirstOrDefault(u => u.IdUsuario == idUsuario);
 
@@ -187,7 +187,7 @@ namespace senai_spmedgroup_webAPI.Repositories
                                 })
                                 .ToList();
             }
-            else if (idTipoUsuario == 2)
+            else if (idTipoUsuario == 3)
             {
                 Paciente paciente = ctx.Pacientes.FirstOrDefault(u => u.IdUsuario == idUsuario);
 

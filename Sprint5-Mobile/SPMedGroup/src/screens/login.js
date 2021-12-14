@@ -64,16 +64,14 @@ export default class Login extends Component {
               placeholder="E-mail"
               placeholderTextColor="#FFF"
               keyboardType="email-address"
-              // ENVENTO PARA FAZERMOS ALGO ENQUANTO O TEXTO MUDA
               onChangeText={email => this.setState({email})}
             />
             <TextInput
               style={styles.inputLogin}
               placeholder="Senha"
               placeholderTextColor="#FFF"
-              keyboardType="default" //para default nao obrigatorio.
-              secureTextEntry={true} //proteje a senha.
-              // ENVENTO PARA FAZERMOS ALGO ENQUANTO O TEXTO MUDA
+              keyboardType="default" 
+              secureTextEntry={true} 
               onChangeText={senha => this.setState({senha})}
             />
             <TouchableOpacity
@@ -90,7 +88,6 @@ export default class Login extends Component {
 
 const styles = StyleSheet.create({
   
-  //antes da main
   overlay: {
     ...StyleSheet.absoluteFillObject, 
     backgroundColor: 'rgba(0, 0, 0, 0.2)'
