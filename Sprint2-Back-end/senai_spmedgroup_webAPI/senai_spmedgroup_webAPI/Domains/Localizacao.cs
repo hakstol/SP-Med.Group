@@ -18,6 +18,6 @@ namespace senai_spmedgroup_webAPI.Domains
         public string Latitude { get; set; }
         
         [BsonRequired]
-        public string Longitute { get; set; }
+        public string Longitude { get; set; }
     }
 }

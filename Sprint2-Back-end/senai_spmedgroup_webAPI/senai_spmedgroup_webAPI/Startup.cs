@@ -81,6 +81,8 @@ namespace SPMedicalGroupWebApi
 
             app.UseRouting();
 
+            app.UseCors("CorsPolicy");
+
             app.UseAuthentication();
 
             app.UseAuthorization();
