@@ -13,9 +13,11 @@ namespace senai_spmedgroup_webAPI.Domains
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
 
-        [BsonElement]
+        [BsonElement("latitude")]
+        [BsonRequired]
         public string Latitude { get; set; }
-
+        
+        [BsonRequired]
         public string Longitute { get; set; }
     }
 }
