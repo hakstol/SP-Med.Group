@@ -157,10 +157,12 @@ namespace senai_spmedgroup_webAPI.Repositories
 
                 return ctx.Consulta
                                 .Where(c => c.IdMedico == idMedico)
+                                .AsNoTracking()
                                 .Select(p => new Consultum()
                                 {
                                     DataConsulta = p.DataConsulta,
                                     IdConsulta = p.IdConsulta,
+                                    DescricaoConsulta = p.DescricaoConsulta,
                                     IdMedicoNavigation = new Medico()
                                     {
                                         Crm = p.IdMedicoNavigation.Crm,
@@ -168,6 +170,10 @@ namespace senai_spmedgroup_webAPI.Repositories
                                         {
                                             NomeUsuario = p.IdMedicoNavigation.IdUsuarioNavigation.NomeUsuario,
                                             Email = p.IdMedicoNavigation.IdUsuarioNavigation.Email
+                                        },
+                                        IdClinicaNavigation = new Clinica()
+                                        {
+                                            NomeClinica = p.IdMedicoNavigation.IdClinicaNavigation.NomeClinica
                                         }
                                     },
                                     IdPacienteNavigation = new Paciente()
@@ -182,18 +188,21 @@ namespace senai_spmedgroup_webAPI.Repositories
                                     },
                                     IdSituacaoNavigation = new Situacao()
                                     {
-                                        NomeSituacao= p.IdSituacaoNavigation.NomeSituacao
+                                        NomeSituacao = p.IdSituacaoNavigation.NomeSituacao
                                     }
+
+
                                 })
                                 .ToList();
             }
             else if (idTipoUsuario == 3)
             {
-                Paciente paciente = ctx.Pacientes.FirstOrDefault(u => u.IdUsuario == idUsuario);
+                Paciente Paciente = ctx.Pacientes.FirstOrDefault(u => u.IdUsuario == idUsuario);
 
-                int idPaciente = paciente.IdPaciente;
+                short idPaciente = (short)Paciente.IdPaciente;
                 return ctx.Consulta
-                                .Where(c => c.IdConsulta == idPaciente)
+                                .Where(c => c.IdPaciente == idPaciente)
+                                .AsNoTracking()
                                 .Select(p => new Consultum()
                                 {
                                     DataConsulta = p.DataConsulta,
@@ -204,7 +213,12 @@ namespace senai_spmedgroup_webAPI.Repositories
                                         IdUsuarioNavigation = new Usuario()
                                         {
                                             NomeUsuario = p.IdMedicoNavigation.IdUsuarioNavigation.NomeUsuario,
-                                            Email = p.IdMedicoNavigation.IdUsuarioNavigation.Email
+                                            Email = p.IdMedicoNavigation.IdUsuarioNavigation.Email,
+
+                                        },
+                                        IdClinicaNavigation = new Clinica()
+                                        {
+                                            NomeClinica = p.IdMedicoNavigation.IdClinicaNavigation.NomeClinica
                                         }
                                     },
                                     IdPacienteNavigation = new Paciente()
@@ -224,9 +238,11 @@ namespace senai_spmedgroup_webAPI.Repositories
                                 })
                                 .ToList();
             }
+            else
+            {
 
-            return null;
-
+                return null;
+            }
         }
 
         public bool AtualizarDescricao(int IdConsulta, int IdMedico, DescricaoViewModel Consulta)

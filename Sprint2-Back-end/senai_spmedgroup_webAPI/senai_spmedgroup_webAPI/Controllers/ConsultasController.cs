@@ -144,7 +144,7 @@ namespace senai_spmedgroup_webAPI.Controllers
         /// </summary>
         /// <returns></returns>
         [Authorize(Roles = "2,3")]
-        [HttpGet("minhas")]
+        [HttpGet("Listar/Minhas")]
         public IActionResult ListarMinhas()
         {
             {
@@ -153,9 +153,9 @@ namespace senai_spmedgroup_webAPI.Controllers
 
                     int idUsuario = Convert.ToInt32(HttpContext.User.Claims.First(c => c.Type == JwtRegisteredClaimNames.Jti).Value);
                     int idTipoUsuario = Convert.ToInt32(HttpContext.User.Claims.First(c => c.Type == ClaimTypes.Role).Value);
-                    List<Consultum> listaConsulta = _consultaRepository.ListarMinhas(idUsuario, idTipoUsuario);
+                    List<Consultum> listarMinhas = _consultaRepository.ListarMinhas(idUsuario, idTipoUsuario);
 
-                    if (listaConsulta.Count == 0)
+                    if (listarMinhas.Count == 0)
                     {
                         return NotFound(new
                         {
@@ -168,7 +168,7 @@ namespace senai_spmedgroup_webAPI.Controllers
                         return Ok(new
                         {
                             Mensagem = $"O paciente buscado tem {_consultaRepository.ListarMinhas(idUsuario, idTipoUsuario).Count} consultas",
-                            listaConsulta
+                            listarMinhas
                         });
                     }
                     if (idTipoUsuario == 2)
@@ -176,7 +176,7 @@ namespace senai_spmedgroup_webAPI.Controllers
                         return Ok(new
                         {
                             Mensagem = $"O médico buscado tem {_consultaRepository.ListarMinhas(idUsuario, idTipoUsuario).Count} consultas",
-                            listaConsulta
+                            listarMinhas
                         });
                     }
                     return null;

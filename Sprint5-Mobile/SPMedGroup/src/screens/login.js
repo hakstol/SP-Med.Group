@@ -7,7 +7,7 @@ import {
   View,
   Image,
   ImageBackground,
-  TextInput,
+  TextInput
 } from 'react-native';
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -35,12 +35,16 @@ export default class Login extends Component {
       if (resposta.status == 200) {
         
         const token = resposta.data.token;
+
         await AsyncStorage.setItem('userToken', token);
+
         this.props.navigation.navigate('Consultas');
+
         console.warn(token);
       }
     }
     catch (error) {
+      console.warn(error);
     }
 
   };
