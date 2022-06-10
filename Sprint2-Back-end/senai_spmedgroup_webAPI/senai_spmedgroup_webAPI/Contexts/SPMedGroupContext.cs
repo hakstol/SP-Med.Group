@@ -31,7 +31,7 @@ namespace senai_spmedgroup_webAPI.Contexts
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Data Source=NOTE0113A4\\SQLEXPRESS; initial catalog=SPMedGroup; integrated security = true");
+                optionsBuilder.UseSqlServer("Data Source=spmed-server-db.database.windows.net; initial catalog=sp-med-group-DB; user Id=levi; pwd=Eigualmc2;");
             }
         }
 

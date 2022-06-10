@@ -1,4 +1,4 @@
-USE SPMedGroup;
+USE [sp-med-group-DB];
 GO
 
 INSERT INTO tipoUsuario(nomeTipoUsuario)
@@ -6,11 +6,11 @@ VALUES ('Administrador'),('Medico'),('Paciente');
 GO
 
 INSERT INTO Endereco(Rua,Numero,Bairro,Cidade,Estado,CEP)
-VALUES
-('Av. Barão Limeira','532','Santa Cecilia','São Paulo','SP','01202001'),('R. Estado de Israel','240','Vila Mariana','São Paulo','SP','04022000'),('Av. Paulista','1578','Bela Vista','São Paulo','SP','01310200'),('Av. Ibirapuera','2927','Indianopolis','São Paulo','SP','04029200'),('R. Vitória','120','Vila São Jorge','Barueri','SP','06402030'),('R. Ver. Geraldo de Camargo','66','Santa Luzia','Ribeirão Pires','SP','09405380'),('Alameda dos Arapanés','945','Indianopolis','São Paulo','SP','04524001'),('R Sao Antonio','232','Vila Universal','Barueri','SP','06407140')
+VALUES('Av. Barão Limeira','532','Santa Cecilia','São Paulo','SP','01202001'),('R. Estado de Israel','240','Vila Mariana','São Paulo','SP','04022000'),('Av. Paulista','1578','Bela Vista','São Paulo','SP','01310200'),('Av. Ibirapuera','2927','Indianopolis','São Paulo','SP','04029200'),('R. Vitória','120','Vila São Jorge','Barueri','SP','06402030'),('R. Ver. Geraldo de Camargo','66','Santa Luzia','Ribeirão Pires','SP','09405380'),('Alameda dos Arapanés','945','Indianopolis','São Paulo','SP','04524001'),('R Sao Antonio','232','Vila Universal','Barueri','SP','06407140');
+GO
 
 INSERT INTO Clinica(IdEndereco,nomeClinica,CNPJ,razaoSocial,Telefone)
-VALUES (1,'Clinica Pclinics','86400902000130','SP Medical Group','(11) 29812920');
+VALUES (1,'Clinica Pclinics','86400902000130','SP Medical Group','1129812921');
 GO
 
 INSERT INTO Especialidade(nomeEspecialidade)

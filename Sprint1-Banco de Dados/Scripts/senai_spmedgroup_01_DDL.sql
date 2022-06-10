@@ -1,7 +1,4 @@
-CREATE DATABASE SPMedGroup;
-GO
-
-USE SPMedGroup;
+USE [sp-med-group-DB];
 GO
 
 CREATE TABLE tipoUsuario(
@@ -39,7 +36,7 @@ CREATE TABLE Clinica(
 	nomeClinica VARCHAR (20) UNIQUE NOT NULL, 
 	CNPJ CHAR(20) UNIQUE NOT NULL,
 	razaoSocial VARCHAR(20) UNIQUE NOT NULL,
-	Telefone CHAR (15) UNIQUE NOT NULL
+	Telefone CHAR (15) NOT NULL
 );
 GO
 
